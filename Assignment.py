@@ -44,4 +44,33 @@ students = [student1, student2, student3]
 for student in students:
     student.display_info
     print("Average Grade:", student.average_grade())
-        
+
+# Create a dictionary mapping email to Student object
+student_dict = {
+    student1.email: student1,
+    student2.email: student2,
+    student3.email: student3
+}
+
+# Function to safely retrieve a student by email 
+def get_student_by_email(email):
+    return student_dict.get(email)
+
+# Example usage
+student = get_student_by_email("stephanie@example.com")
+
+if student:
+    print("Student found:")
+    student.display_info()
+else:
+    print("Student not found.")
+
+# Create a set of all unique grades across all students
+unique_grades = set()
+
+for student in student_dict.values():
+    unique_grades.update(student.grades)
+    
+#Print the set of unique grades
+print("Unique Grades:", unique_grades)
+
