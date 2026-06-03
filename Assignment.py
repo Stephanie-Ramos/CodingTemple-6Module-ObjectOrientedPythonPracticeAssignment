@@ -16,13 +16,32 @@ class Student:
         print("Name:", self.name)
         print("Email:", self.email)
         print("Grades:", self.grades)
+        
 
-# Example Usage
-# student1 = Student("Stephanie Johnson", "stephanie@example.com")
-# student1.add_grade(90)
-# student1.add_grade(85)
-# student1.add_grade(95)
-# student1.display_info()
-# print("Average Grade:", student1.average_grade())
+# Create 3 student objects with initial grades 
+student1 = Student("Stephanie Johnson", "stephanie@example.com")
+student1.add_grades = [88, 92]
 
+student2 = Student("Marlene Brown", "marlene@example.com")
+student2.grades = [80, 70]
+
+student3 = Student("Logan Smith", "logan@example.com")
+student3.grades = [95, 80]
+
+# Add 2 new grades to each student
+student1.add_grade(88)
+student1.add_grade(98)
+
+student2.add_grade(87)
+student2.add_grade(73)
+
+student3.add_grade(72)
+student3.add_grade(85)
+
+# Print information and average grade for each student
+students = [student1, student2, student3]
+
+for student in students:
+    student.display_info
+    print("Average Grade:", student.average_grade())
         
