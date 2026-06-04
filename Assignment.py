@@ -89,4 +89,22 @@ except TypeError as e:
     print("Tuples are immutable and cannot be changed.")
     print("Error:", e)
     
+# Remove the last grade from each student's grade list 
+for student in students:
+    removed_grade = student.grades.pop()
+    print(f"Removed grade {removed_grade} from {student.name}")
 
+print("\nUpdated Student Information:")
+
+# Access and print the first and last grade
+for student in students:
+    print(f"\nStudent: {student.name}")
+    print("Grades:", student.grades)
+    
+    if len(student.grades) > 0:
+        print("First Grade:", student.grades[0])
+        print("Last Grade:", student.grades[-1])
+        
+        # Print the number of grades
+        print("Number of Grades:", len(student.grades))
+        
