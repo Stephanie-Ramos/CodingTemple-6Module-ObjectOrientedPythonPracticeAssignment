@@ -16,6 +16,10 @@ class Student:
         print("Name:", self.name)
         print("Email:", self.email)
         print("Grades:", self.grades)
+
+# add grades_tuple() menthod to my Student class
+    def grades_tuple(self):
+        return tuple(self.grades)
         
 
 # Create 3 student objects with initial grades 
@@ -73,4 +77,16 @@ for student in student_dict.values():
     
 #Print the set of unique grades
 print("Unique Grades:", unique_grades)
+
+# Get grades as a tuple 
+grades = student1.grades_tuple()
+print("Grades Tuple:", grades)
+
+# Try to modify the tuple
+try:
+    grades[0] = 100
+except TypeError as e:
+    print("Tuples are immutable and cannot be changed.")
+    print("Error:", e)
+    
 
