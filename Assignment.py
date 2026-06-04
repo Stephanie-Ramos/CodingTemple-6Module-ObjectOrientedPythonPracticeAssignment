@@ -108,3 +108,28 @@ for student in students:
         # Print the number of grades
         print("Number of Grades:", len(student.grades))
         
+# Part 6 Bonus: 
+import re 
+
+# Regular expression pattern for name@domain.com
+email_pattern = r'^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.com$'
+
+# Validate student emails
+print("Email Validation Results:")
+for student in students:
+    if re.match(email_pattern, student.email):
+        print(f"{student.email} is a valid email.")
+    else:
+        print(f"{student.email} is NOT a valid email")
+
+# Count grades above 90 across all students
+count_above_90 = 0 
+
+for student in students:
+    for grade in student.grades:
+        if grade > 90:
+            count_above_90 += 1
+
+print("\nNumber of grades above 90:", count_above_90)
+
+        
