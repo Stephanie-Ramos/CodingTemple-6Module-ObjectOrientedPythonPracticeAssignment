@@ -1,3 +1,4 @@
+# Part 1: Class Definition 
 class Student:
     def __init__(self, name, email):
         self.name = name
@@ -17,11 +18,11 @@ class Student:
         print("Email:", self.email)
         print("Grades:", self.grades)
 
-# add grades_tuple() menthod to my Student class
+# Part 4: add grades_tuple() menthod to my Student class
     def grades_tuple(self):
         return tuple(self.grades)
         
-
+# Part 2: Working with Objects 
 # Create 3 student objects with initial grades 
 student1 = Student("Stephanie Johnson", "stephanie@example.com")
 student1.add_grades = [88, 92]
@@ -49,6 +50,7 @@ for student in students:
     student.display_info
     print("Average Grade:", student.average_grade())
 
+# Part 3: Dictionary and Set Integration
 # Create a dictionary mapping email to Student object
 student_dict = {
     student1.email: student1,
@@ -78,6 +80,7 @@ for student in student_dict.values():
 #Print the set of unique grades
 print("Unique Grades:", unique_grades)
 
+# Part 4: Tuple Practice 
 # Get grades as a tuple 
 grades = student1.grades_tuple()
 print("Grades Tuple:", grades)
@@ -89,6 +92,7 @@ except TypeError as e:
     print("Tuples are immutable and cannot be changed.")
     print("Error:", e)
     
+# Part 5: List Operations 
 # Remove the last grade from each student's grade list 
 for student in students:
     removed_grade = student.grades.pop()
@@ -108,7 +112,7 @@ for student in students:
         # Print the number of grades
         print("Number of Grades:", len(student.grades))
         
-# Part 6 Bonus: 
+# Part 6: Bonus
 import re 
 
 # Regular expression pattern for name@domain.com
