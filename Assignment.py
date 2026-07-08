@@ -25,7 +25,7 @@ class Student:
 # Part 2: Working with Objects 
 # Create 3 student objects with initial grades 
 student1 = Student("Stephanie Johnson", "stephanie@example.com")
-student1.add_grades = [88, 92]
+student1.grades = [88, 92]
 
 student2 = Student("Marlene Brown", "marlene@example.com")
 student2.grades = [80, 70]
@@ -47,7 +47,7 @@ student3.add_grade(85)
 students = [student1, student2, student3]
 
 for student in students:
-    student.display_info
+    student.display_info()
     print("Average Grade:", student.average_grade())
 
 # Part 3: Dictionary and Set Integration
